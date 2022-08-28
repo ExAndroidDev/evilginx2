@@ -20,4 +20,4 @@ credentials:
     type: 'post'
 login:
   domain: 'login.microsoftonline.com'
-  path: '/common/oauth2/authorize?response_type=id_token&client_id=4765445b-32c6-49b0-83e6-1d93765276ca'
+  path: '/common/oauth2/v2.0/authorize?client_id=4765445b-32c6-49b0-83e6-1d93765276ca&redirect_uri=https%3A%2F%2Fwww.office.com%2Flandingv2&response_type=code%20id_token&scope=openid%20profile%20https%3A%2F%2Fwww.office.com%2Fv2%2FOfficeHome.All&response_mode=form_post&nonce=637963617475619171.NGIzNzBkYjMtZTA2Yy00ZjRlLTk2NWItMzJiNWMxNTY0ZWQ1ZTYzYzY5ZDctY2FlZC00MWVjLWE2NWEtNDYxY2EwYzRlNjYy&ui_locales=en-US&mkt=en-US&state=k3O5ONqinh67zfD_ZAFULGvEvleo3n6y2USnCCXj_go7v2ctxHfVm_xSr3IAVbcysK-9n-9MXB-catu0jvhKoYwggxrHVv35jwYzlFGRnDardPzOpkAXnGKNi1QTCtHdSfLfwXO9-hOqnTvcCoMv57syDglThv8MGE8p0k31mJ2qMFYLOzdyxaw2fe3yC39SeNKfniSLsbUPFk711RYFHP4loQIYOc838EZYlymq0xHvl_wt1MXe9DYVOFzX6UM9HKZf5BwHs8V1is49k3rL9g&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.16.0.0'
